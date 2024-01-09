@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>İşlemci Karşılaştırma</title>
+    <style>
+        .container {
+            background-color: rgb(254, 254, 254);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .intel-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .amd-header {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .processor-section {
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="container mt-5 bg-dark">
+       <h1 class="text-center mb-4 text-white">İşlemci Karşılaştırma</h1>
+
+       <div class="row">
+           <div class="col-md-6">
+               <div class="processor-section text-center bg-light p-4 mb-4">
+                   <h2 class="intel-header">Intel</h2>
+                   <img src="img/intel.webp" alt="Intel Image" class="img-fluid mb-3">
+                   <select id="intelDropdown" class="form-control">
+                       <option value="i9_13900KS">Intel Core i9-13900KS</option>
+                       <option value="i9_13900KF">Intel Core i9-13900KF</option>
+                       <option value="i7_13700KF">Intel Core i7-13700KF</option>
+                       <option value="i7_13700K">Intel Core i7-13700K</option>
+                       <option value="i5_13600KF">Intel Core i5-13600KF</option>
+                       <option value="i5_13600K">Intel Core i5-13600K</option>
+                       <option value="i3_13100F">Intel Core i3-13100F</option>
+                       <option value="i3_13100">Intel Core i3-13100</option>
+                   </select>
+               </div>
+           </div>
+
+           <div class="col-md-6">
+               <div class="processor-section text-center bg-light p-4 mb-4">
+                   <h2 class="amd-header">AMD</h2>
+                   <img src="img/amd.webp" alt="AMD Image" class="img-fluid mb-3">
+                   <select id="amdDropdown" class="form-control">
+                       <option value="r9_7950X">AMD Ryzen 9 7950X</option>
+                       <option value="r9_7900X">AMD Ryzen 9 7900X</option>
+                       <option value="r7_7700X">AMD Ryzen 7 7700X</option>
+                       <option value="r7_7700">AMD Ryzen 7 7700</option>
+                       <option value="r5_7600X">AMD Ryzen 5 7600X</option>
+                       <option value="r5_7600">AMD Ryzen 5 7600</option>
+                       <option value="r3_5350G">AMD Ryzen 3 PRO 5350G</option>
+                       <option value="r3_5300G">AMD Ryzen 3 5300G</option>
+                   </select>
+               </div>
+           </div>
+       </div>
+        <div class="d-grid gap-2 col-10 mx-auto">
+            <button id="kiyaslaButton" class="btn btn-primary btn-lg" type="button">KIYASLA</button>
+          </div>
+
+       <div class="mt-4">
+           <h2 class="text-center mb-3 text-white">Karşılaştırma Sonucu</h2>
+           <div class="progress mb-3" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 50%"  id="intelProgressBar">Intel Score: 0</div>
+          </div>
+           <div class="progress mb-3" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 50%"  id="amdProgressBar">AMD Score: 0</div>
+          </div>
+       </div>
+   </div>
+
+   
+</body>
+</html>
